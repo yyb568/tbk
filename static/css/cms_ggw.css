@@ -1,0 +1,113 @@
+﻿/* 广告位全局样式 Start */
+.cms_ggw {
+    overflow: hidden;
+    text-align: center;
+}
+.cms_ggw img {
+    vertical-align: middle;
+}
+/* 广告位全局样式 End */
+
+
+/* 弹出广告样式 Start */
+.img_size {
+    position: absolute;
+    z-index: -100;
+    height:0;
+    width: 0;
+    overflow: hidden;
+}
+.img_size img  {
+
+}
+.ggw_fm {
+    max-width: 600px;
+    max-height:600px;
+    position: relative;
+}
+
+.ggw_fm_close {
+    position: absolute;
+    width: 50px;
+    height:50px;
+    top:0;
+    right:0;
+
+    text-align: center;
+    visibility: visible;
+    cursor: pointer;
+}
+.ggw_fm img {
+    max-width: 600px;
+    max-height: 600px;
+}
+/* 弹出广告样式 End */
+
+/* 右侧广告样式 Start */
+@-webkit-keyframes picanim {
+    0% {-webkit-transform:translate3d(0,-2% ,0)}
+    100% {-webkit-transform:translate3d(0,2% ,0)}
+}
+@-moz-keyframes picanim {
+    0% {-moz-transform:translate3d(0,-2% ,0)}
+    100% {-moz-transform:translate3d(0,2% ,0)}
+}
+@-o-keyframes picanim {
+    0% {-o-transform:translate3d(0,-2% ,0)}
+    100% {-o-transform:translate3d(0,2% ,0)}
+}
+@-ms-keyframes picanim {
+    0% {-ms-transform:translate3d(0,-2% ,0)}
+    100% {-ms-transform:translate3d(0,2% ,0)}
+}
+@keyframes picanim {
+    0% {transform:translate3d(0,-2% ,0)}
+    100% {transform:translate3d(0,2% ,0)}
+}
+.ggw_fr {
+    width: 300px;
+    height:360px;
+    position: fixed;
+    top: 50%;
+    margin-top: -200px;
+    visibility: hidden;
+    z-index: 9999999;
+}
+.layui-layer {
+    background: none;
+    box-shadow: none;
+}
+.ggw_fr img {
+    -webkit-animation: picanim 1s ease-in-out infinite alternate;
+    -moz-animation: picanim 1s ease-in-out infinite alternate;
+    -o-animation: picanim 1s ease-in-out infinite alternate;
+    -ms-animation: picanim 1s ease-in-out infinite alternate;
+    animation: picanim 1s ease-in-out infinite alternate;
+    max-width: 300px;
+    max-height: 360px;
+}
+.ggw_fr a {
+    float: left;
+    -webkit-transition-duration: 200ms;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    -ms-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+
+.ggw_fr a:hover {
+    margin-top: -10px;
+}
+.ggw_fr a:hover img{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    -ms-animation-play-state:paused;
+    animation-play-state:paused;
+    -webkit-filter:drop-shadow(0px 25px 5px rgba(0,0,0,.2));
+    -moz-filter:drop-shadow(0px 25px 5px rgba(0,0,0,.2));
+    -o-filter:drop-shadow(0px 25px 5px rgba(0,0,0,.2));
+    -ms-filter:drop-shadow(0px 25px 5px rgba(0,0,0,.2));
+    filter:drop-shadow(0px 25px 5px rgba(0,0,0,.2));
+}
+/* 右侧广告样式 End */
