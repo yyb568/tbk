@@ -17,8 +17,11 @@ class Home extends MY_Controller {
 	}
 	
 	public function index(){
-        $url = 'http://api.taokezhushou.com/api/v1/top_hour?app_key=7c7b0a07f0973598';
-        $goodslist = $this->getDate($url);
+        $day = 'http://api.taokezhushou.com/api/v1/top_day?app_key=7c7b0a07f0973598';
+        $shishi = 'http://api.dataoke.com/index.php?r=Port/index&type=paoliang&appkey=d73f59a183&v=2';
+        $shihislist = $this->getDate($shishi);
+        $goodslist = $this->getDate($day);
+        $this->template['shishilist'] = $shihislist['result'];
         $this->template['twohours'] =  $goodslist['data'];
         $this->load->view("home/index",$this->template);
 	}

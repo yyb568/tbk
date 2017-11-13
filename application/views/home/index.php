@@ -313,27 +313,28 @@
         <!--领券优惠商品-->
         <div class="dis_product">
             <!-- 商品-->
-                    <div class="theme-hover-border-color-1 pro_detail fr">
+            <?php foreach((array)$shishilist as $key => $val){ ?>
+                    <div class="theme-hover-border-color-1 pro_detail">
                         <a rel="nofollow" data-gid="4384622" data-ci="200087" data-in="1" data-uid="681200" data-cn="20" href="/index.php?r=l/d&id=4384622&u=681200"  biz-itemid="548595316985" isconvert="1"  target="_blank" >
-                            <img src="<?=static_url("image")?>tb2yqa4lzuhskjjsspaxxxfgfxa_!!801966992.jpg_310x310.jpg" height="272" style="border: 0;max-width:272px;"/>
+                            <img src="<?=$val['Pic']?>" height="272" style="border: 0;max-width:272px;"/>
                         </a>
                         <div class="pro_intro fr">
                             <p class="pro_title">
                                 <a href="/index.php?r=l/d&id=4384622&u=681200" rel="nofollow"
-                                   target="_blank"  biz-itemid="548595316985" isconvert="1"                                    title="秋冬季加绒小白鞋女百搭学生板鞋韩版休闲保暖单鞋厚底运动棉鞋子" style="font-size: 16px;"
+                                   target="_blank"  biz-itemid="548595316985" isconvert="1" title="" style="font-size: 16px;"
                                    data-gid="4384622" data-ci="200087" data-in="1" data-uid="681200" data-cn="20"
-                                >秋冬季加绒小白鞋女百搭学生板鞋韩版休闲保暖单鞋厚底运动棉鞋子</a>
+                                ><?=$val['Title']?></a>
                             </p>
                             <div class="pro_price color_p">
-                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>10</b></span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i><?=$val['Quan_price']?></b></span>
                                 <div class="out-time theme-color-4" data-goodsid="548595316985" data-seller="801966992"></div>
                             </div>
-                                                            <div class="residue">优惠券总数<i class="color_p theme-color-1">10000</i>张</div>
+                                                            <div class="residue">优惠券总数<i class="color_p theme-color-1"><?=$val['Quan_surplus']?></i>张</div>
                             
                             <div class="pro_nowPri theme-bg-color-1">
-                                <div class="buy-price">38</div>
+                                <div class="buy-price"><?=$val['Org_Price']-$val['Quan_price']?></div>
                                 <div class="old-price">
-                                    <p><i>￥</i>48</p>
+                                    <p><i>￥</i><?=$val['Org_Price']?></p>
                                     <span>券后价</span>
                                 </div>
                                 <div class="go-buy">
@@ -342,37 +343,7 @@
                             </div>
                         </div>
                     </div>
-
-                
-                    <div class="theme-hover-border-color-1 pro_detail addLeft">
-                        <a rel="nofollow" data-gid="4386537" data-ci="200166" data-in="1" data-uid="681200" data-cn="20" href="/index.php?r=l/d&id=4386537&u=681200"  target="_blank" >
-                            <img src="picture/tb157nxjhuavkjjszfjxxcjmpxa_!!0-item_pic.jpg_310x310.jpg" height="272" style="border: 0;max-width:272px;"/>
-                        </a>
-                        <div class="pro_intro fr">
-                            <p class="pro_title">
-                                <a href="/index.php?r=l/d&id=4386537&u=681200" rel="nofollow"
-                                   target="_blank"                                    title="秋冬男士保暖内衣男加厚加绒青少年韩版可外穿学生秋衣秋裤套装" style="font-size: 16px;"
-                                   data-gid="4386537" data-ci="200166" data-in="1" data-uid="681200" data-cn="20"
-                                >秋冬男士保暖内衣男加厚加绒青少年韩版可外穿学生秋衣秋裤套装</a>
-                            </p>
-                            <div class="pro_price color_p">
-                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>50</b></span>
-                                <div class="out-time theme-color-4" data-goodsid="558554630841" data-seller="2262181864"></div>
-                            </div>
-                                                            <div class="residue">优惠券总数<i class="color_p theme-color-1">10000</i>张</div>
-                            
-                            <div class="pro_nowPri theme-bg-color-1">
-                                <div class="buy-price">69</div>
-                                <div class="old-price">
-                                    <p><i>￥</i>119</p>
-                                    <span>券后价</span>
-                                </div>
-                                <div class="go-buy">
-                                    <a class="theme-color-1" data-gid="4386537" data-ci="200166" data-in="1" data-uid="681200" data-cn="20" href="/index.php?r=index/middleurl&id=4386537" target="_blank">去抢购</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php }?>
          </div>
     </div>
 
