@@ -10,11 +10,9 @@
     <link rel="stylesheet" type="text/css" href="<?=static_url("css")?>pager.css">
     <link rel="stylesheet" type="text/css" href="<?=static_url("css")?>swiper.min.css">
     <link rel="stylesheet" type="text/css" href="<?=static_url("css")?>dtk.css">
-    <!-- 皮肤 S-->
-        <!-- 皮肤 E-->
     <link rel="stylesheet" href="<?=static_url("css")?>iconfont.css">
     <link rel="stylesheet" type="text/css" href="<?=static_url("css")?>cms_ggw.css" />
-<title>帮您淘优惠-每天千款优惠券秒杀，一折限时疯抢！-帮您淘优惠</title>
+    <title>帮您淘优惠-每天千款优惠券秒杀，一折限时疯抢！-帮您淘优惠</title>
     <meta name="Keywords" content="帮您淘优惠,优惠券折扣,9块9包邮,限时特卖,优品折扣,帮您淘优惠"/>
     <meta name="Description" content="帮您淘优惠-优惠券折扣直播第一站！每天更新千款，纯人工筛选验货，限时限量特卖，全场1折包邮！"/>
 </head>
@@ -105,7 +103,7 @@
                 <a class="add_favorite" href="javascript:void(0)" onclick="shoucang(document.title,window.location)" style="color: #757575" title="加入收藏，方便下次打开">加入收藏</a>
             </li>
             <li>
-                <a class="header_service" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1417915250&site=qq&menu=yes" style="color: #8da7cb" title="联系我帮你解答">遇到购物问题? 联系我 ></a>
+                <!-- <a class="header_service" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1417915250&site=qq&menu=yes" style="color: #8da7cb" title="联系我帮你解答">遇到购物问题? 联系我 ></a> -->
             </li>
         </ul>
         <div class="clear"></div>
@@ -392,19 +390,20 @@
         <!-- 领券优惠商品-->
         <div class="goods-list main-container">
             <ul class="clearfix">
+                <?php foreach((array)$twohours as $key => $val){ ?>
                     <li class="theme-hover-border-color-1 no-right">
                         <a data-gid="4427647" href="/index.php?r=l/d&id=4427647&u=681200" class="img" rel="nofollow" target="_blank">
                             <i class="today-new"></i>
-                            <img src="picture/tb2z8rynkj8pufjy1xbxxagqvxa_!!698090144.jpg_310x310.jpg" alt="">
+                            <img src="<?=$val['goods_pic']?>" alt="">
                         </a>
                         <div class="goods-padding">
                             <div class="coupon-wrap clearfix">
-                                <span class="price theme-color-8"><b><i>￥</i>1.1</b>券后价</span>
-                                <span class="old-price"><i>￥</i>2.1</span>
-                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i>1</b></span>
+                                <span class="price theme-color-8"><b><i>￥</i><?=$val['coupon_apply_amount'] - $val['coupon_amount']?> </b>券后价</span>
+                                <span class="old-price"><i>￥</i><?=$val['coupon_apply_amount']?></span>
+                                <span class="coupon theme-bg-color-9 theme-color-1 theme-border-color-1">券<b><i>￥</i><?=$val['coupon_amount']?></b></span>
                             </div>
                             <div class="title">
-                                <a data-gid="4427647" target="_blank" href="/index.php?r=l/d&id=4427647&u=681200">卡贝304不锈钢衣柜橱柜门铰链</a>
+                                <a data-gid="4427647" target="_blank" href="/index.php?r=l/d&id=4427647&u=681200"><?=$val['goods_short_title']?></a>
                             </div>
                             <div class="goods-num-type">
                                 <span class="goods-num">销量<b>266157</b></span>
@@ -414,6 +413,7 @@
                             </div>
                         </div>
                     </li>
+                <?php }?>
              </ul>
         </div>
     </div>
