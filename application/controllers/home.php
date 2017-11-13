@@ -18,7 +18,7 @@ class Home extends MY_Controller {
 	}
 	
 	public function index(){
-        $this->view("home/index");
+        $this->load->view("home/index");
 	}
 
 }
