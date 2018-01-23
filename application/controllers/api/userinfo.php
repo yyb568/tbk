@@ -5,7 +5,6 @@
  * add by 尹义斌
  * 2018年1月23日15:07:57
  */
-header('Access-Control-Allow-Origin:*'); 
 class Userinfo extends ApiController{
 	
 	/**
