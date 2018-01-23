@@ -22,7 +22,8 @@ class Userinfo extends ApiController{
 	 * 2017年05月14日14:01:56
 	 */
 	public function getUserinfo(){
-		echo 1;die;
+		print_r($_GET);
+		print_r($_POST);die;
 		// $data['phone'] = $this->input->post("phone", true);
 		// $code = $this->input->post("code", true);
 		// $subscribe = $this->input->post("subscribe", true);
