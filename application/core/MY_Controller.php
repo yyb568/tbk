@@ -23,3 +23,25 @@ class MY_Controller extends CI_Controller{
 	}
 
 }
+
+
+/**
+ * api接口统一基础类
+ * add by 尹义斌
+ * 2018年1月23日15:06:43
+ */
+class ApiController extends CI_Controller{
+
+	/**
+	 * 常量变量定义
+	 */
+	public $template = array();			//模板数据
+	/**
+	 * 初始化操作
+	 * add by 尹义斌
+	 * 2018年1月23日15:06:53
+	 */
+	public function __construct(){
+		parent::__construct();
+	}
+}
