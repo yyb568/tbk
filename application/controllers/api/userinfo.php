@@ -5,6 +5,7 @@
  * add by 尹义斌
  * 2018年1月23日15:07:57
  */
+header('Access-Control-Allow-Origin:*'); 
 class Userinfo extends ApiController{
 	
 	/**
@@ -22,7 +23,7 @@ class Userinfo extends ApiController{
 	 * 2017年05月14日14:01:56
 	 */
 	public function getUserinfo(){
-		header('Access-Control-Allow-Origin:*'); 
+
 		print_r($_GET);
 		print_r($_POST);die;
 		// $data['phone'] = $this->input->post("phone", true);
